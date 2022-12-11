@@ -1,0 +1,400 @@
+@import "./custom.scss";
+
+// Import Bootstrap an BootstrapVue CSS files (order is important)
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/bootstrap-vue/src/index.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+.rounded-10 {
+  border-radius: 10px;
+}
+.floating-anime {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.table thead th {
+  border-bottom: 0.75px solid #efefef;
+  color: #958d8d;
+  font-size: 14px;
+}
+.table th,
+.table td {
+  border-top: none;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.floating-anime2 {
+  animation-name: floating2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating2 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, -20px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.form-control,
+.custom-select {
+  height: calc(2em + 0.75rem + 2px);
+  border: 0.8px solid #c5c5c5;
+}
+
+.form-control-primary,
+.custom-select-primary {
+  height: calc(2em + 0.75rem + 2px);
+  border: 0.8px solid #c5c5c5;
+}
+.form-control::placeholder {
+  color: #495057;
+}
+span.current-color {
+  width: 100px !important;
+  height: 30px !important;
+}
+.modal-header {
+  padding: 1rem 1rem 0.2rem;
+}
+
+.VueCarousel-navigation-button {
+  color: var(--danger) !important;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-xl {
+    max-width: 1100px;
+  }
+}
+label {
+  font-size: 14px;
+}
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-header {
+  border-bottom: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+.cpointer {
+  cursor: pointer;
+}
+div.inputs {
+  position: relative;
+}
+div.inputs > .label {
+  position: absolute;
+  left: 15px;
+  font-size: 14px;
+  top: 50%;
+  margin-top: -9px;
+  transition: 0.3s ease all;
+  color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+div.inputs > .form-control:focus {
+  box-shadow: none;
+  border-color: var(--secondary);
+  background-color: #fff;
+}
+div.inputs > .form-control:focus ~ .label,
+.form-control.focused ~ .label {
+  top: -4%;
+  z-index: 5;
+  background: #fff;
+  color: var(--secondary);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+div.inputs > .form-control:focus ~ .input-group-text,
+.form-control.focused ~ .input-group-text {
+  border-color: var(--secondary);
+}
+div.inputs.auto > .label {
+  top: -4%;
+  z-index: 5;
+  background: #fff;
+  color: var(--secondary);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+.form-control.focused {
+  box-shadow: none;
+  border-color: var(--secondary);
+  background-color: #fff !important;
+}
+
+div.inputs > .form-control.form-control-primary:focus {
+  box-shadow: none;
+  border-color: var(--primary);
+  background-color: #fff;
+}
+div.inputs > .form-control.form-control-primary:focus ~ .label,
+.form-control.focused ~ .label {
+  top: -4%;
+  z-index: 5;
+  background: #fff;
+  color: var(--primary);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+div.inputs > .form-control.form-control-primary:focus ~ .input-group-text,
+.form-control.focused ~ .input-group-text {
+  border-color: var(--primary);
+}
+div.inputs.form-control-primary.auto > .label {
+  top: -4%;
+  z-index: 5;
+  background: #fff;
+  color: var(--primary);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.form-control.form-control-primary.focused {
+  box-shadow: none;
+  border-color: var(--primary);
+  background-color: #fff !important;
+}
+div.inputs.form-control-primary.auto > .input-group-text {
+  border-color: var(--primary);
+}
+.text-faded {
+  color: rgba(0, 0, 0, 0.4);
+}
+.text-purple {
+  color: #431288;
+}
+.shadow-my {
+  box-shadow: 0 0.49407px 1.98814px 0 #cac3c3;
+}
+.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.search.form-control,
+.search.input-group-text {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  background: white;
+}
+.search.input-group-text {
+  opacity: 0.6;
+}
+.search.form-control:focus {
+  box-shadow: none !important;
+}
+.btn {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.btn-md,
+.btn-group-md > .btn {
+  padding: 0.5rem 2rem;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 10px 47px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+small,
+.small,
+small.btn {
+  font-size: 80%;
+  font-weight: 400;
+}
+.btn-secondary {
+  color: #fff;
+}
+.btn-white {
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-white:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.fs20 {
+  font-size: 20px;
+}
+.fs18 {
+  font-size: 18px;
+}
+.fs16 {
+  font-size: 16px;
+}
+.fs14 {
+  font-size: 14px;
+}
+.fs12 {
+  font-size: 12px;
+}
+h1,
+.h1 {
+  font-size: 2rem;
+}
+.vue-back-to-top .default {
+  background-color: var(--primary) !important;
+  border-radius: 3px;
+  color: #ffffff;
+  height: 0 !important;
+  line-height: 0 !important;
+  text-align: center;
+  padding: 16px 6px !important;
+  width: auto !important;
+  font-size: 13px !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #cccccc;
+}
+.not_home.navbar-dark .navbar-nav .nav-link {
+  color: var(--primary);
+  font-weight: 500;
+}
+.dropdown-item {
+  font-size: 14px;
+  color: var(--primary);
+}
+.logo {
+  z-index: 999;
+}
+.border-top-right-radius-0 {
+  border-top-right-radius: 0;
+}
+.border-bottom-right-radius-0 {
+  border-bottom-right-radius: 0;
+}
+
+.border-top-left-radius-0 {
+  border-top-left-radius: 0;
+}
+.border-bottom-left-radius-0 {
+  border-bottom-left-radius: 0;
+}
+ul li.b-nav-dropdown .nav-link.dropdown-toggle {
+  font-weight: 500;
+}
+legend {
+  font-size: 14px !important;
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1240px;
+  }
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.1rem;
+  }
+  h5,
+  .h5 {
+    font-size: 1rem;
+  }
+  p,
+  strong {
+    font-size: 14px;
+  }
+  .row {
+    height: 100% !important;
+  }
+  .not_home ul li.b-nav-dropdown .nav-link.dropdown-toggle {
+    color: #cccccc;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  ul li.b-nav-dropdown .nav-link.dropdown-toggle {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 14px;
+  }
+  div.inputs > .label {
+    font-size: 12px;
+  }
+  .half_circle_1 img {
+    width: 40px;
+  }
+  .half_circle_2 img {
+    width: 40px;
+  }
+  .half_circle_3 img {
+    width: 40px;
+  }
+  .bg_1 img {
+    width: 200px;
+  }
+  .bg_2 img {
+    width: 200px;
+  }
+  .half_circle_1 {
+    left: -15px !important;
+  }
+  .half_circle_2 {
+    bottom: -18px !important;
+  }
+  .half_circle_3 {
+    right: -15px !important;
+  }
+}
